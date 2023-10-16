@@ -9,7 +9,7 @@ These are types that makes TypeScript report sane errors when trying to access p
 The basic types with defined properties behaves correctly
 
 ```ts
-import NullProto from "..";
+import NullProto from "null-proto-ts";
 
 
 // Correct behavior when toString is missing:
@@ -44,7 +44,7 @@ console.log(objWithoutTyping.toString());
 Mapped keys are a bit tricky, due to how you want the Object.prototype keys to be accessible with the correct mapped type.
 
 ```ts
-import NullProto from "..";
+import NullProto from "null-proto-ts";
 
 // Correct behavior when having a mapped key:
 const objWithTyping: NullProto<{[k: string]: string}> = Object.create(null);
